@@ -61,6 +61,16 @@ class Menu
   // menu de pause
   void menu2() 
   {
+    fill(20, 50);
+    rectMode(CENTER);
+    rect(width/2, height/2, width, height);
+    textAlign(CENTER, CENTER);
+    textSize(46);
+    fill(230);
+    text("Pause", width/2, height/3);
+    textSize(32);
+    text("Reprendre", width/2, 5*height/10);
+    text("Quitter", width/2, 6*height/10);
   }
 
   void option() 
@@ -103,7 +113,9 @@ class Menu
     fill(optionB9);
      rect(width/4, 12*height/18, xT, yT);
      fill(optionB10);
-     rect(width/2, 12*height/18, xT, yT);
+     */
+    rect(width/2, 12*height/18, xT, yT);
+    /*
      fill(optionB11);
      rect(3*width/4, 12*height/18, xT, yT);
      */
@@ -131,6 +143,7 @@ class Menu
     // text("Sourie", width/4, 12*height/18);
     // text("Clavier", width/2, 12*height/18);
     // text("Auto", 3*width/4, 12*height/18);
+    text("Save", width/2, 12*height/18);
   }
 
 
@@ -215,6 +228,13 @@ class Menu
           optionB7 = 20;
           optionB8 = 40;
         }
+      } else if (mouseY > 12*height/18-yT/2 && mouseY < 12*height/18+yT/2) 
+      {
+
+        if (mouseX > width/2-xT/2 && mouseX < width/2+xT/2) 
+        {
+          save.addScore(param.score);
+        }
         /*
       } else if (mouseY > 12*height/18-yT/2 && mouseY < 12*height/18+yT/2) 
          {
@@ -241,6 +261,14 @@ class Menu
       } else if (mouseY < 5*height/6+yT && mouseX < width/2+xT && mouseY > 5*height/6-yT && mouseX > width/2-xT) 
       {
         fenetre = 1;
+      }
+    } else if (fenetre == 5) {
+      if (mouseX < width/2 + xT && mouseX > width/2 - xT) {
+        if (mouseY > 5*height/10-yT && mouseY < 5*height/10+yT) {
+          fenetre = 3;
+        } else if (mouseY > 6*height/10-yT && mouseY < 6*height/10+yT) {
+          exit();
+        }
       }
     }
   }

@@ -40,9 +40,9 @@ class Save
   void saveScore() {
 
     highscore = new JSONArray();
-    JSONObject addScore = new JSONObject();
-    addScore.setInt("Tuto", menu.tuto);
+    
     for (int i = 0; i < Score.length; i++) {
+      JSONObject addScore = new JSONObject();
       addScore.setInt("Rang", i+1);
       addScore.setInt("Score", Score[i]);
       highscore.setJSONObject(i, addScore);
@@ -61,7 +61,6 @@ class Save
       JSONObject addScore = highscore.getJSONObject(i); 
       int id = addScore.getInt("Rang");
       int Score = addScore.getInt("Score");
-      menu.tuto = addScore.getInt("Tuto");
       println("Rang : " + id); 
       println("Score : " + Score);
     }

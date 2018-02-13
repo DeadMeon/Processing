@@ -2,7 +2,7 @@ class Decors
 {
   // attributs
   int i;
-
+  int x,y;
 
   // constructeur(s)
   Decors()
@@ -13,6 +13,7 @@ class Decors
 
   // méthodes
   // loop pour la musique 
+
   void musique() {
     if (i == file.duration()*60) {
       file.loop();
@@ -24,5 +25,16 @@ class Decors
 
   // dessin d'etoile dans le background
   void etoile() {
+    for (y = 0; y < height; y = y + 300) {
+      for (x = 0; x < width; x = x + 300) {
+        
+        // fonction noise ...
+        fill(255, 255, 212);
+        noStroke();
+        rect(random(x, x+300), random(y, y + 300), random(1, 3), random(10,16));
+      }
+    }
   }
 }
+
+  

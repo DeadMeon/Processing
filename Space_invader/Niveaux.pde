@@ -3,11 +3,16 @@ class Niveaux
   // attributs
   int niv;
   int bg;
+  int comp;
+  float xAlien, yAlien;
 
   // constructeur(s)
   Niveaux() {
     bg = param.bg;
     niv = 0;
+    comp = 0;
+    xAlien = 2*width/4;
+    yAlien = 4*height/20;
   }
 
   // méthodes
@@ -56,28 +61,43 @@ class Niveaux
   void niveaux02() 
   {
     background(bg);
+    decor.etoile();
     fill(230);
     textSize(24);
     text("Score : " + param.score, 16*width/20, height/20);
-    alien.alien2(2*width/4, 4*height/20);
+
     joueur.joueur();
-    if (param.score == 100*param.diff) {
+    if (param.score == 10*param.diff && comp == 25) {
       explosion();
+    } else if (param.score == 10*param.diff) {
+      alien.explosionAlien(xAlien, yAlien);       
+      comp++;
+    } else {
+      alien.mvt(0);
+      alien.alien2(xAlien, yAlien);
     }
   }
 
   // niveau 2
   void niveaux03() 
   {
+
+
     background(bg);
+    decor.etoile();
     fill(230);
     textSize(24);
     text("Score : " + param.score, 16*width/20, height/20);
-    alien.alien3(2*width/4, 4*height/20);
-    alien.mvt(2*param.diff);
+
     joueur.joueur();
-    if (param.score == 300*param.diff) {
+    if (param.score == 100*param.diff && comp == 25) {
       explosion();
+    } else if (param.score == 500*param.diff) {
+      alien.explosionAlien(xAlien, yAlien);       
+      comp++;
+    } else {
+      alien.mvt(3*param.diff);
+      alien.alien2(xAlien, yAlien);
     }
   }
 
@@ -85,14 +105,20 @@ class Niveaux
   void niveaux04() 
   {
     background(bg);
+    decor.etoile();
     fill(230);
     textSize(24);
     text("Score : " + param.score, 16*width/20, height/20);
-    alien.alien2(2*width/4, 4*height/20);
-    alien.mvt(5*param.diff);
+
     joueur.joueur();
-    if (param.score == 900*param.diff) {
+    if (param.score == 10*param.diff && comp == 25) {
       explosion();
+    } else if (param.score == 1000*param.diff) {
+      alien.explosionAlien(xAlien, yAlien);       
+      comp++;
+    } else {
+      alien.mvt(5*param.diff);
+      alien.alien2(xAlien, yAlien);
     }
   }
 
@@ -100,14 +126,20 @@ class Niveaux
   void niveaux05() 
   {
     background(bg);
+    decor.etoile();
     fill(230);
     textSize(24);
     text("Score : " + param.score, 16*width/20, height/20);
-    alien.alien1(2*width/4, 4*height/20);
-    alien.mvt(5*param.diff);
+
     joueur.joueur();
-    if (param.score == 2000*param.diff) {
+    if (param.score == 10*param.diff && comp == 25) {
       explosion();
+    } else if (param.score == 2500*param.diff) {
+      alien.explosionAlien(xAlien, yAlien);       
+      comp++;
+    } else {
+      alien.mvt(5*param.diff);
+      alien.alien2(xAlien, yAlien);
     }
   }
 
@@ -119,7 +151,22 @@ class Niveaux
       hitbox.a = true;
       alien.explosionAlien(alien.x, alien.y);
     }
+    // changement de niveaux et reinitialisation des positions
     niv++;
+    if (niv == 2) {
+      xAlien = 2*width/4;
+      yAlien = 4*height/20;
+    } else if (niv == 3) {
+      xAlien = 2*width/4;
+      yAlien = 4*height/20;
+    } else if (niv == 4) {
+      xAlien = 2*width/4;
+      yAlien = 4*height/20;
+    } else if (niv == 5) {
+      xAlien = 2*width/4;
+      yAlien = 4*height/20;
+    }
+    comp = 0;
     hitbox.a = false;
   }
 }

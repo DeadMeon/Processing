@@ -2,17 +2,17 @@ class Alien
 {
   // attributs
   float x, y;
-  float v, t;
+  int t;
   color c;
   int alienMvt;
   int i = 0;
-
+  int vAlien;
+  boolean j = false;
 
   // constructeur
   Alien() {
     this.x = 100;
     this.y = 200;
-    this.v = 20;
     this.t = param.t;
     this.c = 255;
     alienMvt = 0;
@@ -20,14 +20,18 @@ class Alien
 
 
   // méthodes
-  // deplacement des Aliens
+
   void mvt(int v) {
-    if (x > 19*width/20) {
-      v = -v;
-    } else if (x < width/20) {
-      v = -v;
+    if ((niv.xAlien <= 5*t || niv.xAlien >= width-5*t)) {
+      j = !j;
+    } 
+    if (j == false) { 
+      vAlien = v;
+    } else {
+      vAlien = -v;
     }
-    x += v;
+    niv.xAlien += vAlien;
+    println(niv.xAlien);
   }
 
 

@@ -1,4 +1,8 @@
+// 1100 ligne de code !!
+
 // importation d'une classe pour la musique 
+// sketch -> importer une librairie -> ajouter une librairie 
+// ajouter dasn le filtre "Sound" et installer celui de "The Processing Foundation"
 import processing.sound.*;
 
 // assignation des classes
@@ -18,6 +22,7 @@ SoundFile file;
 // initialisation
 void setup() 
 {
+
   size(1000, 1000);
   frameRate(60);
   font = createFont("PressStart2P-Regular.ttf", 32);
@@ -53,6 +58,7 @@ void draw()
   } else if (fenetre == 3) 
   {
     //lancement du jeu
+
     niv.niveaux();
   } else if (fenetre == 4) 
   {

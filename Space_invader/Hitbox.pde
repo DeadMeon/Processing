@@ -28,7 +28,7 @@ class Hitbox
     noStroke();
     if ( yBalle > -5) {
       yBalle = yBalle - vBalle;
-      rect(xBalle, yBalle, t, 3*t);
+      rect(xBalle, yBalle-3*t, t, 3*t);
     } else {
       joueur.tire = false;
       yBalle = joueur.y;

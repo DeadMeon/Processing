@@ -107,7 +107,7 @@ class Joueur
         tire = true;
       } 
       if (key == 'p' || key == 'P') {
-        menu.fenetre = 1;
+        menu.fenetre = 5;
       }
     }
   }
