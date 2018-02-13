@@ -1,16 +1,16 @@
 # Space invader on Processing 3
-## v0.1
+## v0.1.2
 
 
 **To - do lists :**
-- deplacement des aliens
+
 - nombres de tires 
 - plus d'un ennemie sur l'ecran
 - add menu pause 
-- add bouton pour save le score
+- add bouton pour save les parametre dans les options
 - tirer en se deplacent
-- ne plus voir le tire partir a l'interieurdu vaisseaux
 - add tire ennemie
 - add vie du joueur
-
+- add flame vaisseaux 
+- modif les etoiles en fonds
 
