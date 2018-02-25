@@ -5,6 +5,7 @@ class Parametres
   int score ;
   int t;
   int diff;
+  int nbMaxBalle;
   
   
   // constructeur(s)
@@ -14,5 +15,6 @@ class Parametres
     score = 0;
     t = 10;
     diff = 1;
+    nbMaxBalle = 10;
   }
 }

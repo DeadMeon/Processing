@@ -44,7 +44,7 @@ class Menu
     textAlign(CENTER, CENTER);
     text("Space Invaders", width/2, height/3);
     textSize(14);
-    text("v0.1", width/2+250, height/3+50);
+    text("v0.1.4", width/2+250, height/3+50);
     textSize(24);
     text("Lancer !", width/2, height/2+25);
     text("Option", width/2, height/2+85);
