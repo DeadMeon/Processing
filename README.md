@@ -1,16 +1,14 @@
 # Space invader on Processing 3
-## v0.1.2
+## v0.1.4
 
 
 **To - do lists :**
 
-- nombres de tires 
-- plus d'un ennemie sur l'ecran
-- add menu pause 
+- plus d'un ennemie sur l'ecran 
 - add bouton pour save les parametre dans les options
 - tirer en se deplacent
 - add tire ennemie
 - add vie du joueur
 - add flame vaisseaux 
-- modif les etoiles en fonds
+- 
 
