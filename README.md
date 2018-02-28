@@ -6,7 +6,7 @@
 
 - plus d'un ennemie sur l'ecran 
 - add bouton pour save les parametre dans les options
-- tirer en se deplacent
+- tirer sans s'arreter
 - add tire ennemie
 - add vie du joueur
 - add flame vaisseaux 
